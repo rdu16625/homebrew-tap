@@ -5,21 +5,21 @@
 class Kavilo < Formula
   desc "A lightweight personal AI assistant — single binary, zero dependencies"
   homepage "https://github.com/rdu16625/kavilo"
-  version "0.2.0"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.0/kavilo_darwin_amd64.tar.gz"
-      sha256 "9726069dc0be1e96de66e5b0bad89b16faa086ce86afc0cc90150b7c92bb90b8"
+      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.2/kavilo_darwin_amd64.zip"
+      sha256 "bb86713975c877b2572f5d51dfa1a2c393592ee5a80e6df3cc93f82c9c8232f4"
 
       define_method(:install) do
         bin.install "kavilo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.0/kavilo_darwin_arm64.tar.gz"
-      sha256 "aec41fd6f9eaaa0e6e56d5156c7a07dee3dc28730fdd575bd756c292dccd8576"
+      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.2/kavilo_darwin_arm64.zip"
+      sha256 "e5baa93483cb9cbbd45ce119507b7915ed732f8d9770dbf59bc9cd01ea94e64d"
 
       define_method(:install) do
         bin.install "kavilo"
@@ -29,15 +29,15 @@ class Kavilo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.0/kavilo_linux_amd64.tar.gz"
-      sha256 "7ce645113cf25f33c3a1ebfbec029cb111119a7e39bdca3c59f7c5a89c4218e2"
+      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.2/kavilo_linux_amd64.tar.gz"
+      sha256 "dae0ffad0ac3b7577051ee1d9f03fc3167c588d7ae0fb53e8e397fc446592d2c"
       define_method(:install) do
         bin.install "kavilo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.0/kavilo_linux_arm64.tar.gz"
-      sha256 "338726604edab98ab41baaebf999a5d53b436abb3b31499f69eccf76b5b6d7e2"
+      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.2/kavilo_linux_arm64.tar.gz"
+      sha256 "b686782370965e0b673c6090d71729a8f1f01b508f80198b37a5d42cc9a6e4ab"
       define_method(:install) do
         bin.install "kavilo"
       end
