@@ -10,7 +10,7 @@ class Kavilo < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.0/kavilo_0.2.0_darwin_amd64.tar.gz"
+      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.0/kavilo_darwin_amd64.tar.gz"
       sha256 "9726069dc0be1e96de66e5b0bad89b16faa086ce86afc0cc90150b7c92bb90b8"
 
       define_method(:install) do
@@ -18,7 +18,7 @@ class Kavilo < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.0/kavilo_0.2.0_darwin_arm64.tar.gz"
+      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.0/kavilo_darwin_arm64.tar.gz"
       sha256 "aec41fd6f9eaaa0e6e56d5156c7a07dee3dc28730fdd575bd756c292dccd8576"
 
       define_method(:install) do
@@ -29,14 +29,14 @@ class Kavilo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.0/kavilo_0.2.0_linux_amd64.tar.gz"
+      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.0/kavilo_linux_amd64.tar.gz"
       sha256 "7ce645113cf25f33c3a1ebfbec029cb111119a7e39bdca3c59f7c5a89c4218e2"
       define_method(:install) do
         bin.install "kavilo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.0/kavilo_0.2.0_linux_arm64.tar.gz"
+      url "https://github.com/rdu16625/homebrew-tap/releases/download/v0.2.0/kavilo_linux_arm64.tar.gz"
       sha256 "338726604edab98ab41baaebf999a5d53b436abb3b31499f69eccf76b5b6d7e2"
       define_method(:install) do
         bin.install "kavilo"
