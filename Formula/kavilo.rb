@@ -44,6 +44,27 @@ class Kavilo < Formula
     end
   end
 
+  def caveats
+    <<~EOS
+      To run kavilo in the background and restart it at login:
+        brew services start kavilo
+
+      To stop it:
+        brew services stop kavilo
+
+      On macOS, screen capture is usually more reliable when kavilo is launched
+      from a GUI terminal app that already has Screen Recording permission.
+    EOS
+  end
+
+  service do
+    run [opt_bin/"kavilo", "start"]
+    keep_alive true
+    environment_variables PATH: std_service_path_env
+    log_path var/"log/kavilo.log"
+    error_log_path var/"log/kavilo.err.log"
+  end
+
   test do
     system "#{bin}/kavilo", "version"
   end
